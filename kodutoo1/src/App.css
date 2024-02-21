@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.App {
+  text-align: center;
+}
+
+.App .btn {
+  background-color: #606c38;
+  color: #e5e5e5;
+}
+
+.App .btn:hover {
+  height: 100px;
+}
+
+.App .btn:active {
+  cursor: grab;
+}
+
+.blue-text {
+  color: blue;
+  font-style: italic;
+}
+
+.App .blue-text:hover {
+  font-size: 24px;
+}
+
+.App .green-text {
+  color: green;
+  font-weight: bold;
+  border: 3px solid #d00000;
+  display: inline-block;
+}
+
+.App .green-text:hover {
+  border: 6px solid #6c584c;
+}
+
+.App .turtle-img {
+  height: 200px;
+  width: 200px;
+  float: right;
+}
+
+.App .turtle-img:hover {
+  border-radius: 50%;
+}
+
+.App .turtle-img:active {
+  opacity: 0.5;
+}
