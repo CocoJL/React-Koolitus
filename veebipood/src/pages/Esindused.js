@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Esindused() {
   return (
@@ -26,6 +27,9 @@ function Esindused() {
         Pärnu (1)
         <div>Port Artur 2</div>
       </div>
+      <Link to='/'>
+        <button>Tagasi</button>
+      </Link>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function LisaToode() {
   return (
@@ -20,6 +21,9 @@ function LisaToode() {
           the server called "action_page.php".
         </p>
       </div>
+      <Link to='/'>
+        <button>Tagasi</button>
+      </Link>
     </div>
   );
 }

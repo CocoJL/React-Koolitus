@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Ostukorv() {
   return (
@@ -11,6 +12,9 @@ function Ostukorv() {
         />
         <p>Ostukorv on hetkel tühi.</p>
       </div>
+      <Link to='/'>
+        <button>Tagasi</button>
+      </Link>
     </div>
   );
 }

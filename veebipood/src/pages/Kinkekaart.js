@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Kinkekaart() {
   return (
@@ -13,6 +14,9 @@ function Kinkekaart() {
         <span>7</span>
         <button>+</button>
       </div>
+      <Link to='/'>
+        <button>Tagasi</button>
+      </Link>
     </div>
   );
 }

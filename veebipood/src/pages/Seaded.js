@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Seaded() {
   return (
@@ -12,6 +13,9 @@ function Seaded() {
         <button>Eng</button>
         <button>Rus</button>
       </div>
+      <Link to='/'>
+        <button>Tagasi</button>
+      </Link>
     </div>
   );
 }
