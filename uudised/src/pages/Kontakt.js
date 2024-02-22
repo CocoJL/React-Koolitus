@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Kontakt() {
   return (
@@ -16,6 +17,9 @@ function Kontakt() {
       <div>Tasku keskus</div>
       <div>+39312323</div>
       <div>Turu 2</div>
+      <Link to='/'>
+        <button>Tagasi</button>
+      </Link>
     </div>
   );
 }

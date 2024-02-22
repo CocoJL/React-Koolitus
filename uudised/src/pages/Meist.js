@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Meist() {
   return (
@@ -21,6 +22,9 @@ function Meist() {
       <div>Kerli Kõiv</div>
       <div>+312312312</div>
       <div>Välisturgude spetsialist</div>
+      <Link to='/'>
+        <button>Tagasi</button>
+      </Link>
     </div>
   );
 }
