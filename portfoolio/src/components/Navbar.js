@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Avaleht() {
+function Navbar() {
   return (
     <div>
       <div className='hero-banner'>
@@ -15,19 +15,19 @@ function Avaleht() {
       </div>
       <div className='image-wrapper'>
         <div className='image'>
-          <Link to='work'>
+          <Link to='/work'>
             <img src='/assets/images/work.jpg' alt='work station' />
           </Link>
           <p>Work</p>
         </div>
         <div className='image'>
-          <Link to='hobbies'>
+          <Link to='/hobbies'>
             <img src='/assets/images/hobbies.jpg' alt='gym' />
           </Link>
           <p>Hobbies</p>
         </div>
         <div className='image'>
-          <Link to='courses'>
+          <Link to='/courses'>
             <img src='/assets/images/courses.jpg' alt='courses' />
           </Link>
           <p>Courses</p>
@@ -37,4 +37,4 @@ function Avaleht() {
   );
 }
 
-export default Avaleht;
+export default Navbar;

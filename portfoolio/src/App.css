@@ -24,8 +24,7 @@ h1 {
   height: 300px;
   width: 1550px;
   border-radius: 1em;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .name {
@@ -53,11 +52,7 @@ h1 {
 
 .image {
   background: #52c234; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #061700,
-    #52c234
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #061700, #52c234); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
     #061700,
@@ -79,4 +74,41 @@ h1 {
   margin-top: 10px;
   color: white;
   font-size: 18px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  align-items: center;
+}
+button {
+  margin: 0 20px;
+  font-size: 18px;
+  border: 1px solid olivedrab;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 0.5em;
+  height: 50px;
+  width: 150px;
+}
+
+button:hover {
+  background-color: #f3f3f3;
+  transform: scale(1.1);
+  border: 1px solid olivedrab;
+}
+
+.kursusActive {
+  border: 3px solid black;
+}
+
+.kursuOffline {
+  background-color: #fff;
+  color: #000;
+}
+
+.kirjeldus {
+  margin-top: 100px;
+  text-align: center;
 }
