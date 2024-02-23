@@ -22,7 +22,7 @@ function Courses() {
       voluptatibus consequatur quibusdam labore id, quasi, hic dicta similique
       nisi nostrum, molestias vitae! Quaerat nemo voluptates commodi repudiandae
       reprehenderit, libero sunt sed nihil.
-      <Link to='/'>
+      <Link to='/avaleht'>
         <button>avaleht</button>
       </Link>
     </div>

@@ -22,7 +22,7 @@ function Work() {
       pariatur illum numquam. Magni quis dolore excepturi nisi optio, rerum
       dolorem explicabo in! Repellat nesciunt modi eos error assumenda sapiente
       reiciendis iure quos at quisquam!
-      <Link to='/'>
+      <Link to='/avaleht'>
         <button>avaleht</button>
       </Link>
     </div>

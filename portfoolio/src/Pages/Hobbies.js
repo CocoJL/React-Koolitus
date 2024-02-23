@@ -21,7 +21,7 @@ function Hobbies() {
       iusto eos architecto saepe rem hic dolores incidunt amet odio culpa
       dolorem reprehenderit recusandae eius excepturi nemo deserunt soluta!
       Aliquam quibusdam modi eum voluptate numquam tempora molestiae quae.
-      <Link to='/'>
+      <Link to='/avaleht'>
         <button>avaleht</button>
       </Link>
     </div>
