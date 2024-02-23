@@ -1,7 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
 .ostukorv img {
   height: 300px;
+}
+
+.linn {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 5px;
+}
+
+.linn:hover {
+  color: #e3068c;
+  line-height: 32px;
+  border-bottom: 3px solid #e3068c;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.linn-aktiivne {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 5px;
+  border-bottom: 3px solid #e3068c;
+}
+
+.linn-aktiivne:hover {
+  color: #e3068c;
+  line-height: 32px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hind {
+  width: 150px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
+}
+
+.hind:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+.nupp-aktiivne {
+  color: #e3068c;
+  border: 3px solid #e3068c;
+  width: 150px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
+}
+
+.sinine {
+  color: blue;
 }

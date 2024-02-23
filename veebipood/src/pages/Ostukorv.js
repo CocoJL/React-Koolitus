@@ -12,7 +12,7 @@ function Ostukorv() {
         />
         <p>Ostukorv on hetkel tühi.</p>
       </div>
-      <Link to='/'>
+      <Link to='/avaleht'>
         <button>Tagasi</button>
       </Link>
     </div>
