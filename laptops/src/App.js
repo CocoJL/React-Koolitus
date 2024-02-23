@@ -1,13 +1,25 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
+import Avaleht from "./Pages/Avaleht";
+import VaataArvuteid from "./Pages/VaataArvuteid";
+import LisaArvuti from "./Pages/LisaArvuti";
 
 function App() {
   return (
     <div>
+      <Link to=''>
+        <button>Avaleht</button>
+      </Link>
+      <Link to='/all'>
+        <button>Vaata sülearvuteid</button>
+      </Link>
+      <Link to='/add'>
+        <button>Lisa sülearvuti</button>
+      </Link>
       <Routes>
-        <Route path='/' element={<div>Avaleht</div>} />
-        <Route path='all' element={<div>Sülearvutid</div>} />
-        <Route path='add' element={<div>Uue sülearvuti lisamine</div>} />
+        <Route path='' element={<Avaleht />} />
+        <Route path='all' element={<VaataArvuteid />} />
+        <Route path='add' element={<LisaArvuti />} />
       </Routes>
     </div>
   );
