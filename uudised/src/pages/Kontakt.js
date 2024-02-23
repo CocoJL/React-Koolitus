@@ -17,7 +17,7 @@ function Kontakt() {
       <div>Tasku keskus</div>
       <div>+39312323</div>
       <div>Turu 2</div>
-      <Link to='/'>
+      <Link to='/avaleht'>
         <button>Tagasi</button>
       </Link>
     </div>

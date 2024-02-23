@@ -7,7 +7,7 @@ function Uudised() {
       <div>See on uudiste leht, nähtav localhost:3000/uudised aadressil</div>
       <span>Uudised saabuvad juba varsti, stay tuned!</span>
       <br />
-      <Link to='/'>
+      <Link to='/avaleht'>
         <button>Tagasi</button>
       </Link>
     </div>

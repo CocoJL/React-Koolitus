@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Avaleht() {
   return (
     <div>
-      <Link to='uudised'>
+      <Link to='/uudised'>
         <button>Uudiste lehele</button>
       </Link>
       <Link to='/kontakt'>

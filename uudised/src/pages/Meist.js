@@ -22,7 +22,7 @@ function Meist() {
       <div>Kerli Kõiv</div>
       <div>+312312312</div>
       <div>Välisturgude spetsialist</div>
-      <Link to='/'>
+      <Link to='/avaleht'>
         <button>Tagasi</button>
       </Link>
     </div>
