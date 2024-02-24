@@ -1,5 +1,5 @@
-import Sidebar from "../../sidebar/Sidebar";
-import TopBar from "../../topbar/TopBar";
+import Sidebar from "../../Components/sidebar/Sidebar";
+import TopBar from "../../Components/topbar/TopBar";
 import "./settings.css";
 
 function Settings() {

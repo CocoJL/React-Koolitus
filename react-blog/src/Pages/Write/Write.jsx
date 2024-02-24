@@ -1,4 +1,4 @@
-import TopBar from "../../topbar/TopBar";
+import TopBar from "../../Components/topbar/TopBar";
 import "./write.css";
 
 function Write() {
