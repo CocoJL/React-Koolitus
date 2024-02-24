@@ -1,9 +1,15 @@
 import "./posts.css";
+import Post from "../post/Post";
 
 function Posts() {
   return (
     <div className='posts'>
-      <div>Posts</div>
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
     </div>
   );
 }
