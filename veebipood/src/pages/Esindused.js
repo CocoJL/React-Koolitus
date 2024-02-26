@@ -50,7 +50,7 @@ function Esindused() {
           <div>Port Artur 2</div>
         </div>
       )}
-      <Link to='/avaleht'>
+      <Link to='/'>
         <button>Tagasi</button>
       </Link>
     </div>

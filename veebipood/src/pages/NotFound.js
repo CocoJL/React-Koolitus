@@ -8,7 +8,7 @@ function NotFound() {
         src='https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/06/Error-404-on-Mozilla-Firefox.webp'
         alt='not found'
       />
-      <Link to='/avaleht'>
+      <Link to='/'>
         <button>Avalehele</button>
       </Link>
     </div>

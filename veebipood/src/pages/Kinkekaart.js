@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Kinkekaart() {
   const [hind, muudaHind] = useState(20);
-
+  const [kogus, setKogus] = useState(1);
   return (
     <div>
       <div>Kinkekaart</div>
@@ -21,11 +21,13 @@ function Kinkekaart() {
         <br />
         <div>Kinkekaart {hind} €</div>
         {/* <img src='https://storage.googleapis.com/arvutitark-public/static/ui/gift-1.png' alt='kinkekaart' /> */}
-        <button>-</button>
-        <span>7</span>
-        <button>+</button>
+        <button disabled={kogus === 1} onClick={() => setKogus(kogus - 1)}>
+          -
+        </button>
+        <span>{kogus}</span>
+        <button onClick={() => setKogus(kogus + 1)}>+</button>
       </div>
-      <Link to='/avaleht'>
+      <Link to='/'>
         <button>Tagasi</button>
       </Link>
     </div>

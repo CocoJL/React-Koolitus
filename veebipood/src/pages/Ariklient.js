@@ -15,7 +15,7 @@ function Ariklient() {
       {leht === "tutvustus" && <Tutvustus />}
       {leht === "myyk" && <Myyk />}
       {leht === "garantii" && <Garantii />}
-      <Link to='/avaleht'>
+      <Link to='/'>
         <button>Tagasi</button>
       </Link>
     </div>
