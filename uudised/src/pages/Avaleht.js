@@ -13,11 +13,8 @@ function Avaleht() {
       <Link to='/meist'>
         <button>Info meist</button>
       </Link>
-      <h1>See on avaleht, nähtav localhost:3000 aadressil</h1>
-      <img
-        src='https://img.freepik.com/free-vector/blue-curve-background_53876-113112.jpg'
-        alt='bg'
-      />
+      <h1>See on avaleht, nähtav localhost:3000/avaleht aadressil</h1>
+      <img src='https://img.freepik.com/free-vector/blue-curve-background_53876-113112.jpg' alt='bg' />
     </div>
   );
 }
