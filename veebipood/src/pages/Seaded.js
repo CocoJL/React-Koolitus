@@ -50,6 +50,16 @@ function Seaded() {
   };
   // Kontrolli kas on sisestatud, konrolli kas algab +372
   const sisestaTelefon = () => {
+    if (telefonRef.current.value === "") {
+      toast.error("Palun sisesta telefoni number");
+      return;
+    }
+
+    if (telefonRef.current.value.includes("+") === false) {
+      toast.error("Palun sisesta korrektne telefoni number algusega +372 ");
+      return;
+    }
+
     setTelefon(telefonRef.current.value);
     localStorage.setItem("telefon", telefonRef.current.value);
     telefonRef.current.value = "";
