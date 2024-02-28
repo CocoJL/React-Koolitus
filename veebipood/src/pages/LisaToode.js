@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import LisaTegelane from "../components/lisaTegelane/LisaTegelane";
 
 function LisaToode() {
   const [sonum, uuendaSonum] = useState("");
@@ -10,9 +11,18 @@ function LisaToode() {
     if (readInput.current.value === "") {
       uuendaSonum("Palun lisa toode");
     } else {
-      uuendaSonum("Toote nimi: " + readInput.current.value + ", Kategooria nimi: " + catInput.current.value);
+      uuendaSonum(
+        "Toote nimi: " +
+          readInput.current.value +
+          ", Kategooria nimi: " +
+          catInput.current.value
+      );
     }
   };
+
+  // const lisaUusTegelane {
+  // ss
+  // }
 
   return (
     <div>
@@ -26,8 +36,11 @@ function LisaToode() {
         <input ref={catInput} type='text' />
         <br /> <br />
         <button onClick={lisa}>Sisesta</button>
-        <p style={{ color: "white", backgroundColor: "hsla(0, 0%, 0%, 0.50)" }}>{sonum}</p>
+        <p style={{ color: "white", backgroundColor: "hsla(0, 0%, 0%, 0.50)" }}>
+          {sonum}
+        </p>
       </div>
+
       <Link to='/'>
         <button>Tagasi</button>
       </Link>
