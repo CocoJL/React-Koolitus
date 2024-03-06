@@ -1,14 +1,23 @@
-import React from 'react';
-// ara siia tee tabelit
-// ÄRGE TEHKE TABELIT
-// 1. Copy-paste import
-// 2. Copy-paste useState
-// 3. Copy-paste .map()
-// 4. Cut kustutamise funktsioon
-// 5. Esindused.js sees kustuta Button mis funktsiooni välja kutsub
-// 6. keskused.splice() asemel halda sees, tuleb panna keskusedFailist.splice()
+import React, { useState } from 'react';
+import tallinnJSON from '../data/tallinn.json';
+
 function HaldaEsindused() {
-	return <div>HaldaEsindused</div>;
+	const [keskus, setKeskus] = useState(tallinnJSON);
+	const deleteKeskus = (e) => {
+		tallinnJSON.splice(e, 1);
+		setKeskus(tallinnJSON.slice());
+	};
+
+	return (
+		<div>
+			{keskus.map((keskused, e) => (
+				<div>
+					{e}.{keskused}
+					<button onClick={() => deleteKeskus(e)}>x</button>
+				</div>
+			))}
+		</div>
+	);
 }
 
 export default HaldaEsindused;

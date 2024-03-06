@@ -63,16 +63,16 @@ function Esindused() {
 		setKeskus(vastus);
 	};
 
-	const deleteKeskus = (e) => {
-		keskus.splice(e, 1);
-		setKeskus(keskus.slice());
-	};
+	// const deleteKeskus = (e) => {
+	// 	keskus.splice(e, 1);
+	// 	setKeskus(keskus.slice());
+	// };
 
-	// T2hem2rkidega kokkuliitmine
+	// // T2hem2rkidega kokkuliitmine
 
-	const liidaKokku = () => {
-		let margid = 0;
-	};
+	// const liidaKokku = () => {
+	// 	let margid = 0;
+	// };
 	return (
 		<div>
 			<div>Esindused</div>
@@ -103,7 +103,6 @@ function Esindused() {
 					{keskus.map((keskused, e) => (
 						<div>
 							{e}.{keskused}
-							<button onClick={() => deleteKeskus(e)}>x</button>
 						</div>
 					))}
 					<button onClick={original}>Originaali</button> <br />

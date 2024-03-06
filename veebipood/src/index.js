@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "react-toastify/dist/ReactToastify.css";
 import "./index.css"; // Ülevalt alla
 import App from "./App";
-// import reportWebVitals from "./reportWebVitals";
+
 import { BrowserRouter } from "react-router-dom";
 
 // Navigeerimiseks (route-ing)
