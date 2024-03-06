@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import tallinnJSON from '../data/tallinn.json';
+
+// Renderdamine -> HTMLi väljakuvamine
+// Re-renderdamine -> HTMLi uuendus    useState-i funktsioon setBLABLA
+
 function Esindused() {
 	const [linn, muudaLinn] = useState('Tallinn');
 	const [keskus, setKeskus] = useState(tallinnJSON);
@@ -59,6 +63,16 @@ function Esindused() {
 		setKeskus(vastus);
 	};
 
+	const deleteKeskus = (e) => {
+		keskus.splice(e, 1);
+		setKeskus(keskus.slice());
+	};
+
+	// T2hem2rkidega kokkuliitmine
+
+	const liidaKokku = () => {
+		let margid = 0;
+	};
 	return (
 		<div>
 			<div>Esindused</div>
@@ -86,8 +100,11 @@ function Esindused() {
 
 			{linn === 'Tallinn' && (
 				<div>
-					{keskus.map((keskused) => (
-						<div>{keskused}</div>
+					{keskus.map((keskused, e) => (
+						<div>
+							{e}.{keskused}
+							<button onClick={() => deleteKeskus(e)}>x</button>
+						</div>
 					))}
 					<button onClick={original}>Originaali</button> <br />
 					<button onClick={sortAZ}>Sorteeri A-Z</button>

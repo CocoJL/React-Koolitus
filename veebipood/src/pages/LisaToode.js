@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import tootedJSON from '../data/tooted.json';
 
 function LisaToode() {
 	const [sonum, uuendaSonum] = useState('');
@@ -11,6 +12,8 @@ function LisaToode() {
 			uuendaSonum('Palun lisa toode');
 		} else {
 			uuendaSonum('Toote nimi: ' + readInput.current.value + ', Kategooria nimi: ' + catInput.current.value);
+
+			tootedJSON.push(readInput.current.value);
 		}
 	};
 

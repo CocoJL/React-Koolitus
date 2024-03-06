@@ -26,7 +26,7 @@ function Ostukorv() {
 
 			<div>
 				{ostukorv.map((toode, e) => (
-					<div>
+					<div key={e}>
 						{toode}
 						<button onClick={() => kustutaToode(e)}>x</button>
 					</div>

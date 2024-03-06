@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import tootajaJSON from '../data/tootaja.json';
 
-function Töötajad() {
+function Tootajad() {
 	// Kuva koik tootajad
 	// ["Urmet", "Kaido", "Liina", "Maiki", "Heidi", "Epp", "Kaire", "Anet", "Maarja", "Ave", "Annika", "Mihkel" ]
 	// naita valja koguarv
@@ -83,7 +83,7 @@ function Töötajad() {
 	};
 
 	const filterThirdI = () => {
-		const vastus = worker.filter((worker) => worker.charAt(2) === 'i');
+		const vastus = worker.filter((worker) => worker.charAt[2] === 'i');
 		setWorker(vastus);
 	};
 
@@ -107,6 +107,14 @@ function Töötajad() {
 		setWorker(worker.slice());
 		addRef.current.value = '';
 	};
+
+	const arvutaKokku = () => {
+		let summa = 0;
+
+		worker.forEach((tootaja) => (summa += tootaja.length));
+
+		return summa;
+	};
 	return (
 		<div className='tootajad'>
 			<div>
@@ -117,6 +125,7 @@ function Töötajad() {
 						<button onClick={() => deleteWorker(e)}>x</button>
 					</div>
 				))}
+				<div>Kokku on tööjate peale {arvutaKokku()} tähemärki.</div>
 			</div>
 			<label>Lisa juurde</label>
 			<input type='text' ref={addRef} />
@@ -140,4 +149,4 @@ function Töötajad() {
 	);
 }
 
-export default Töötajad;
+export default Tootajad;
