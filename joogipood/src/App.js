@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Link } from 'react-router-dom';
+import Avaleht from './Pages/Avaleht/Avaleht';
+import Haldajooke from './Pages/HaldaJooke/Haldajooke';
+import LisaJook from './Pages/LisaJook/LisaJook';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='App'>
+			<Link to='/'>
+				<button>Avaleht</button>
+			</Link>
+			<Link to='/haldajooke'>
+				<button>Haldajooke</button>
+			</Link>
+			<Link to='/lisajook'>
+				<button>Lisajook</button>
+			</Link>
+			<Routes>
+				<Route path='/' element={<Avaleht />}></Route>
+				<Route path='haldajooke' element={<Haldajooke />}></Route>
+				<Route path='lisajook' element={<LisaJook />}></Route>
+			</Routes>
+		</div>
+	);
 }
 
 export default App;
