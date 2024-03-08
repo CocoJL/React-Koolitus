@@ -18,6 +18,14 @@ import HaldaTootajad from './pages/HaldaTootajad';
 import LisaHind from './pages/LisaHind';
 import LisaEsindus from './pages/LisaEsindus';
 import LisaTootaja from './pages/LisaTootaja';
+import YksTootaja from './pages/YksTootaja';
+import YksEsindus from './pages/YksEsindus';
+import YksHind from './pages/YksHind';
+import YksToode from './pages/YksToode';
+import MuudaToode from './pages/MuudaToode';
+import MuudaHind from './pages/MuudaHind';
+import MuudaEsindus from './pages/MuudaEsindus';
+import MuudaTootaja from './pages/MuudaTootaja';
 
 function App() {
 	return (
@@ -91,10 +99,22 @@ function App() {
 				<Route path='halda-esindused' element={<HaldaEsindused />} />
 				<Route path='halda-hinnad' element={<HaldaHinnad />} />
 				<Route path='halda-tootajad' element={<HaldaTootajad />} />
-				<Route path='*' element={<Avaleht />} />
+
 				<Route path='lisa-hind' element={<LisaHind />} />
 				<Route path='lisa-esindus' element={<LisaEsindus />} />
 				<Route path='lisa-tootaja' element={<LisaTootaja />} />
+
+				<Route path='tootaja/:index' element={<YksTootaja />} />
+				<Route path='esindus/:index' element={<YksEsindus />} />
+				<Route path='hind/:index' element={<YksHind />} />
+				<Route path='toode/:index' element={<YksToode />} />
+
+				<Route path='muuda-tootaja/:indeks' element={<MuudaTootaja />} />
+				<Route path='muuda-esindus/:indeks' element={<MuudaEsindus />} />
+				<Route path='muuda-hind/:indeks' element={<MuudaHind />} />
+				<Route path='muuda-toode/:indeks' element={<MuudaToode />} />
+
+				<Route path='*' element={<Avaleht />} />
 			</Routes>
 		</div>
 	);

@@ -12,6 +12,14 @@
 	height: 300px;
 }
 
+.pilt {
+	height: 200px;
+}
+
+.pilt-mitteaktiivne {
+	width: 150px;
+	filter: grayscale(100%);
+}
 .linn {
 	font-size: 20px;
 	font-weight: 600;

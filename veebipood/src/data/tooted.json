@@ -1,1 +1,8 @@
-["Nobe", "Tesla", "BMW"]
+[
+	{ "nimi": "Nobe", "hind": 25000, "aktiivne": true, "pilt": "https://visionest.institute/wp-content/uploads/2023/07/i_6_NOBE-3.jpg" },
+	{ "nimi": "Nissan", "hind": 90000, "aktiivne": true, "pilt": "https://www.carscoops.com/wp-content/uploads/2023/04/Nissan-Skyline-GT-R-V-Spec-II-5-a-1024x576.jpg" },
+	{ "nimi": "Tesla", "hind": 75000, "aktiivne": false, "pilt": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Tesla_Model_Y_1X7A6211.jpg" },
+	{ "nimi": "Toyota", "hind": 42500, "aktiivne": false, "pilt": "https://bloximages.newyork1.vip.townnews.com/richmond.com/content/tncms/assets/v3/classifieds/0/81/081b6d72-b73d-59f7-9d6c-ef28d415bb71/5ecf02d9ec354.image.jpg" },
+	{ "nimi": "BMW", "hind": 105000, "aktiivne": true, "pilt": "https://www.bmw.ee/content/dam/bmw/common/all-models/m-series/m5-sedan/2021/Overview/bmw-m5-cs-onepager-gallery-m5-core-02-wallpaper.jpg" },
+	{ "nimi": "Bentley", "hind": 5000, "aktiivne": true, "pilt": "https://imgd.aeplcdn.com/370x208/ec/d2/36/9774/img/m/Bentley-Continental-GT-Right-Front-Three-Quarter-52653_ol.jpg" }
+]

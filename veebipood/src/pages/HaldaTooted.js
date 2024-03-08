@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import tootedFailist from '../data/tooted.json';
 
 function HaldaTooted() {
@@ -14,6 +15,7 @@ function HaldaTooted() {
 			<table>
 				<thead>
 					<tr>
+						<th>Toote pilt</th>
 						<th>Toote nimi</th>
 						<th>Toote hind</th>
 						<th>Muuda</th>
@@ -23,10 +25,15 @@ function HaldaTooted() {
 				<tbody>
 					{tooted.map((toode, e) => (
 						<tr key={e}>
-							<td>{toode}</td>
-							<td>5€</td>
 							<td>
-								<button>Muuda</button>
+								<img className='pilt' src={toode.pilt} alt='' />
+							</td>
+							<td>{toode.nimi}</td>
+							<td>{toode.hind} €</td>
+							<td>
+								<Link to={'/muuda-toode/' + e}>
+									<button>Muuda</button>
+								</Link>
 							</td>
 							<td>
 								<button onClick={() => kustutaToode(e)}>x</button>

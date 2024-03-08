@@ -1,19 +1,32 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import tootedJSON from '../data/tooted.json';
+import userEvent from '@testing-library/user-event';
 
 function LisaToode() {
 	const [sonum, uuendaSonum] = useState('');
-	const readInput = useRef();
-	const catInput = useRef();
+	const nimiRef = useRef();
+	const hindRef = useRef();
+	const piltRef = useRef();
+	const aktiivneRef = useRef();
 
 	const lisa = () => {
-		if (readInput.current.value === '') {
+		if (nimiRef.current.value === '') {
 			uuendaSonum('Palun lisa toode');
 		} else {
-			uuendaSonum('Toote nimi: ' + readInput.current.value + ', Kategooria nimi: ' + catInput.current.value);
+			uuendaSonum(
+				'Toote nimi: ' +
+					nimiRef.current.value +
+					', Kategooria nimi: ' +
+					hindRef.current.value
+			);
 
-			tootedJSON.push(readInput.current.value);
+			tootedJSON.push({
+				nimi: nimiRef.current.value,
+				hind: Number(hindRef.current.value),
+				aktiivne: aktiivneRef.current.checked,
+				pilt: piltRef.current.value,
+			});
 		}
 	};
 
@@ -27,13 +40,21 @@ function LisaToode() {
 			<div>
 				<h1>The input element</h1>
 				<label>Toote nimi: </label>
-				<input ref={readInput} type='text' />
+				<input ref={nimiRef} type='text' />
 				<br /> <br />
-				<label>Toote kategooria: </label>
-				<input ref={catInput} type='text' />
+				<label>Toote hind: </label>
+				<input ref={hindRef} type='number' />
+				<br /> <br />
+				<label>Toote pilt: </label>
+				<input ref={piltRef} type='text' />
+				<br /> <br />
+				<label>Toode aktiivne: </label>
+				<input ref={aktiivneRef} type='checkbox' />
 				<br /> <br />
 				<button onClick={lisa}>Sisesta</button>
-				<p style={{ color: 'white', backgroundColor: 'hsla(0, 0%, 0%, 0.50)' }}>{sonum}</p>
+				<p style={{ color: 'white', backgroundColor: 'hsla(0, 0%, 0%, 0.50)' }}>
+					{sonum}
+				</p>
 			</div>
 
 			<Link to='/'>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import hinnadJSON from '../data/hinnad.json';
-
 function Hinnad() {
 	const [hinnad, setHinnad] = useState(hinnadJSON);
 
@@ -14,35 +13,37 @@ function Hinnad() {
 	};
 
 	const sorteeriZA = () => {
-		hinnad.sort((a, b) => b.toString().localeCompare(a.toString()));
+		hinnad.sort((a, b) =>
+			b.number.toString().localeCompare(a.number.toString())
+		);
 		setHinnad(hinnad.slice());
 	};
 
 	const sorteeriKasvavalt = () => {
-		hinnad.sort((a, b) => a - b);
+		hinnad.sort((a, b) => a.number - b.number);
 		setHinnad(hinnad.slice());
 	};
 
 	const sorteeriKahanevalt = () => {
-		hinnad.sort((a, b) => b - a);
+		hinnad.sort((a, b) => b.number - a.number);
 		//hinnad.sort((a, b) => -1 * (a - b));
 		// hinnad.reverse();
 		setHinnad(hinnad.slice());
 	};
 
 	const filtreeriSuuremKui50 = () => {
-		const vastus = hinnad.filter((hind) => hind > 50);
+		const vastus = hinnad.filter((hind) => hind.number > 50);
 		setHinnad(vastus);
 	};
 
 	const filtreeriVaiksemKui20 = () => {
-		const vastus = hinnad.filter((hind) => hind < 20);
+		const vastus = hinnad.filter((hind) => hind.number < 20);
 		setHinnad(vastus);
 	};
 
 	const arvutaKokku = () => {
 		let summa = 0;
-		hinnad.forEach((hind) => (summa += hind));
+		hinnad.forEach((hind) => (summa += hind.number));
 		return summa;
 	};
 
@@ -64,13 +65,15 @@ function Hinnad() {
 			<br />
 
 			<button onClick={filtreeriSuuremKui50}>Jäta alles suuremad kui 50</button>
-			<button onClick={filtreeriVaiksemKui20}>Jäta alles väiksemad kui 20</button>
+			<button onClick={filtreeriVaiksemKui20}>
+				Jäta alles väiksemad kui 20
+			</button>
 
 			<br />
 			<br />
 
 			{hinnad.map((hind, index) => (
-				<div key={index}>{hind}</div>
+				<div key={index}>{hind.number}</div>
 			))}
 		</div>
 	);

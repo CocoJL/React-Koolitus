@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import tootedFailist from '../data/tooted.json';
+import { Link } from 'react-router-dom';
 
 function Tooted() {
 	// Andmete algväärtus
@@ -23,7 +24,17 @@ function Tooted() {
 			{/* Väljastame tooted */}
 			<ul>
 				{tooted.map((toode, index) => (
-					<div key={index}>{toode}</div>
+					<div key={index}>
+						<img className={toode.aktiivne ? 'pilt' : 'pilt-mitteaktiivne'} src={toode.pilt} alt='' /> <br />
+						<div>{toode.nimi}</div>
+						<div>{toode.hind} €</div>
+						{/* Esimene / kui j22b 2ra siis liidab olemasoleva URL, 
+						kui teine kaldkriips j22b 2ra siis liidab URL ja nr kokku */}
+						<Link to={'/toode/' + index}>
+							<button>Vaata lähemalt</button>
+						</Link>
+						<br />
+					</div>
 				))}
 			</ul>
 			{/* Näitame toodete kogust */}
