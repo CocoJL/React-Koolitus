@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import tootedFailist from '../data/tooted.json';
 import { Link } from 'react-router-dom';
-
+import ostukorvJSON from '../data/ostukorv.json';
+import { ToastContainer, toast } from 'react-toastify';
 function Tooted() {
 	// Andmete algväärtus
 	const [tooted, setTooted] = useState(tootedFailist);
@@ -18,9 +19,42 @@ function Tooted() {
 		setTooted(tooted.slice());
 	};
 
+	const lisaOstukorvi = (lisatavToode) => {
+		ostukorvJSON.push(lisatavToode);
+		toast.success('Edukalt lisatud');
+	};
+
+	// const filtreeriNAlgavad = () => {
+	// 	const vastus = tootedFailist.filter((toode) => toode.nimi.startsWith('N'));
+	// 	setTooted(vastus);
+	// };
+
+	// const filtreeriBAlgavad = () => {
+	// 	const vastus = tootedFailist.filter((toode) => toode.nimi.startsWith('B'));
+	// 	setTooted(vastus);
+	// };
+
+	// const filtreeriTAlgavad = () => {
+	// 	const vastus = tootedFailist.filter((toode) => toode.nimi.startsWith('T'));
+	// 	setTooted(vastus);
+	// };
+
+	const filtreeriAlgustaheJargi = (algustaht) => {
+		const vastus = tootedFailist.filter((toode) =>
+			toode.nimi.startsWith(algustaht)
+		);
+		setTooted(vastus);
+	};
+
 	return (
 		<div>
 			<h2>Tooted</h2>
+			{/* <button onClick={filtreeriNAlgavad}>N</button>
+			<button onClick={filtreeriBAlgavad}>B</button>
+			<button onClick={filtreeriTAlgavad}>T</button> */}
+			<button onClick={() => filtreeriAlgustaheJargi('N')}>N</button>
+			<button onClick={() => filtreeriAlgustaheJargi('B')}>B</button>
+			<button onClick={() => filtreeriAlgustaheJargi('T')}>T</button>
 			{/* Väljastame tooted */}
 			<ul>
 				{tooted.map((toode, index) => (
@@ -38,6 +72,12 @@ function Tooted() {
 						<Link to={'/toode/' + index}>
 							<button>Vaata lähemalt</button>
 						</Link>
+						<button
+							disabled={toode.aktiivne === false}
+							onClick={() => lisaOstukorvi(toode)}
+						>
+							lisa ostukorvi
+						</button>
 						<br />
 					</div>
 				))}
@@ -47,6 +87,7 @@ function Tooted() {
 			{/* Nupud sorteerimiseks */}
 			<button onClick={sorteeriAZ}>Sorteeri A-Z</button>
 			<button onClick={sorteeriZA}>Sorteeri Z-A</button>
+			<ToastContainer />
 		</div>
 	);
 }
