@@ -63,33 +63,35 @@ function Esindused() {
 		setKeskus(vastus);
 	};
 
-	// const deleteKeskus = (e) => {
-	// 	keskus.splice(e, 1);
-	// 	setKeskus(keskus.slice());
-	// };
-
-	// // T2hem2rkidega kokkuliitmine
-
-	// const liidaKokku = () => {
-	// 	let margid = 0;
-	// };
 	return (
 		<div>
 			<div>Esindused</div>
 
-			<span className={linn === 'Tallinn' ? 'linn-aktiivne' : 'linn'} onClick={() => muudaLinn('Tallinn')}>
+			<span
+				className={linn === 'Tallinn' ? 'linn-aktiivne' : 'linn'}
+				onClick={() => muudaLinn('Tallinn')}
+			>
 				Tallinn (7)
 			</span>
 
-			<span className={linn === 'Tartu' ? 'linn-aktiivne' : 'linn'} onClick={() => muudaLinn('Tartu')}>
+			<span
+				className={linn === 'Tartu' ? 'linn-aktiivne' : 'linn'}
+				onClick={() => muudaLinn('Tartu')}
+			>
 				Tartu (2)
 			</span>
 
-			<span className={linn === 'Narva' ? 'linn-aktiivne' : 'linn'} onClick={() => muudaLinn('Narva')}>
+			<span
+				className={linn === 'Narva' ? 'linn-aktiivne' : 'linn'}
+				onClick={() => muudaLinn('Narva')}
+			>
 				Narva (1)
 			</span>
 
-			<span className={linn === 'Pärnu' ? 'linn-aktiivne' : 'linn'} onClick={() => muudaLinn('Pärnu')}>
+			<span
+				className={linn === 'Pärnu' ? 'linn-aktiivne' : 'linn'}
+				onClick={() => muudaLinn('Pärnu')}
+			>
 				Pärnu (1)
 			</span>
 
@@ -101,8 +103,11 @@ function Esindused() {
 			{linn === 'Tallinn' && (
 				<div>
 					{keskus.map((keskused, e) => (
-						<div>
-							{e}.{keskused}
+						<div key={keskused}>
+							<div>{keskused.nimi}</div>
+							<Link to={'/esindus/' + e}>
+								<button>Vaata lähemalt</button>
+							</Link>
 						</div>
 					))}
 					<button onClick={original}>Originaali</button> <br />
@@ -115,8 +120,12 @@ function Esindused() {
 					<button onClick={filterE}>Jäta alles 'e'ga lõppevad </button>
 					<button onClick={filter9}>Jäta alles 9 tähelised </button>
 					<button onClick={filter7}>Jäta alles vähemalt 7 tähelised </button>
-					<button onClick={filterIs}>Jäta alles kes sisaldavad 'is' lühendit </button>
-					<button onClick={filter3}>Jäta alles kellel on kolmas täht 'i' </button>
+					<button onClick={filterIs}>
+						Jäta alles kes sisaldavad 'is' lühendit{' '}
+					</button>
+					<button onClick={filter3}>
+						Jäta alles kellel on kolmas täht 'i'{' '}
+					</button>
 				</div>
 			)}
 

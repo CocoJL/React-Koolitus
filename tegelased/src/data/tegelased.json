@@ -1,0 +1,27 @@
+[
+	{
+		"eesnimi": "Mickey",
+		"perenimi": "Mouse",
+		"elukoht": "Disneyland"
+	},
+	{
+		"eesnimi": "Minnie",
+		"perenimi": "Mouse",
+		"elukoht": "Disneyland"
+	},
+	{
+		"eesnimi": "Winnie",
+		"perenimi": "Pooh",
+		"elukoht": "Hundred Acre Wood"
+	},
+	{
+		"eesnimi": "Roo",
+		"perenimi": "Kangaroo",
+		"elukoht": "Hundred Acre Wood"
+	},
+	{
+		"eesnimi": "Scooby",
+		"perenimi": "Doo",
+		"elukoht": "Crystal Cove"
+	}
+]

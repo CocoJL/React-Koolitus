@@ -2,11 +2,11 @@ import React, { useRef } from 'react';
 import hindJSON from '../data/hinnad.json';
 import { useParams } from 'react-router-dom';
 function MuudaHind() {
-	const { indeks } = useParams();
-	const hinnad = hindJSON[indeks];
+	const { index } = useParams();
+	const hinnad = hindJSON[index];
 	const hindRef = useRef();
 	const muudaHind = () => {
-		hindJSON[indeks] = { ...hinnad, number: Number(hindRef.current.value) };
+		hindJSON[index] = { ...hinnad, number: Number(hindRef.current.value) };
 		hindRef.current.value = '';
 	};
 

@@ -31,7 +31,11 @@ function App() {
 	return (
 		<div className='App'>
 			<Link to='/'>
-				<img className='turtle' src='https://www.fisheries.noaa.gov/s3/styles/full_width/s3/dam-migration/hawksbill_sea_turtle.jpg?itok=ESbU98wo' alt='turtle' />
+				<img
+					className='turtle'
+					src='https://www.fisheries.noaa.gov/s3/styles/full_width/s3/dam-migration/hawksbill_sea_turtle.jpg?itok=ESbU98wo'
+					alt='turtle'
+				/>
 			</Link>
 			<Link to='/esindused'>
 				<button className='btn'>Esindused</button>
@@ -109,10 +113,10 @@ function App() {
 				<Route path='hind/:index' element={<YksHind />} />
 				<Route path='toode/:index' element={<YksToode />} />
 
-				<Route path='muuda-tootaja/:indeks' element={<MuudaTootaja />} />
-				<Route path='muuda-esindus/:indeks' element={<MuudaEsindus />} />
-				<Route path='muuda-hind/:indeks' element={<MuudaHind />} />
-				<Route path='muuda-toode/:indeks' element={<MuudaToode />} />
+				<Route path='muuda-tootaja/:index' element={<MuudaTootaja />} />
+				<Route path='muuda-esindus/:index' element={<MuudaEsindus />} />
+				<Route path='muuda-hind/:index' element={<MuudaHind />} />
+				<Route path='muuda-toode/:index' element={<MuudaToode />} />
 
 				<Route path='*' element={<Avaleht />} />
 			</Routes>

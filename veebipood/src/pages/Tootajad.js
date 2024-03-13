@@ -1,31 +1,7 @@
 import React, { useRef, useState } from 'react';
 import tootajaJSON from '../data/tootaja.json';
-
+import { Link } from 'react-router-dom';
 function Tootajad() {
-	// Kuva koik tootajad
-	// ["Urmet", "Kaido", "Liina", "Maiki", "Heidi", "Epp", "Kaire", "Anet", "Maarja", "Ave", "Annika", "Mihkel" ]
-	// naita valja koguarv
-	// voimalda tuhjendada
-
-	// Sorteeri: A-Z
-	// Sorteeri: Z-A
-	// Tahemargid kasvavalt
-	// Tahemargid kahanevalt
-	// teine taht A-Z
-	// kolmast taht Z-A
-
-	// filtreeri:
-	// kolmetahelised
-	// rohkem kui 5 tahelsied
-	// 'ai' luhendit sisaldavad
-	// kellel on kolmas taht 'i'
-	// algavad 'a' tahega
-
-	// paarisarv tahti
-	// igatuht saaks kustutada
-	// saaks lisada igatuht juurde
-	//
-
 	const [worker, setWorker] = useState(tootajaJSON);
 	const addRef = useRef();
 
@@ -120,9 +96,12 @@ function Tootajad() {
 			<div>
 				<div>Kogu arv töölisi: {worker.length}</div>
 				{worker.map((work, e) => (
-					<div>
-						{work}
+					<div key={work}>
+						{work.nimi}
 						<button onClick={() => deleteWorker(e)}>x</button>
+						<Link to={'/tootaja/' + e}>
+							<button>Vaata lähemalt</button>
+						</Link>
 					</div>
 				))}
 				<div>Kokku on tööjate peale {arvutaKokku()} tähemärki.</div>

@@ -1,7 +1,12 @@
 import { useRef, useState } from 'react';
 import './tagasiside.css';
 function Tagasiside() {
-	const [tagasiside, setTagasiside] = useState(['Oli hea', 'Huvitav', 'Teistsugune', 'Põnev']);
+	const [tagasiside, setTagasiside] = useState([
+		'Oli hea',
+		'Huvitav',
+		'Teistsugune',
+		'Põnev',
+	]);
 	const addRef = useRef();
 	const deleteX = (e) => {
 		tagasiside.splice(e, 1);
@@ -18,7 +23,7 @@ function Tagasiside() {
 		<div>
 			Tagasisided:
 			{tagasiside.map((info, e) => (
-				<div>
+				<div key={e}>
 					{info}
 
 					<button onClick={() => deleteX(e)}>x</button>

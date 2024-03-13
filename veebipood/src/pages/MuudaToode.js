@@ -3,8 +3,8 @@ import tootedJSON from '../data/tooted.json';
 import { useParams } from 'react-router-dom';
 
 function MuudaToode() {
-	const { indeks } = useParams();
-	const leitud = tootedJSON[indeks];
+	const { index } = useParams();
+	const leitud = tootedJSON[index];
 	const nimiRef = useRef();
 	const hindRef = useRef();
 	const piltRef = useRef();
@@ -15,7 +15,7 @@ function MuudaToode() {
 	}
 
 	const muuda = () => {
-		tootedJSON[indeks] = {
+		tootedJSON[index] = {
 			nimi: nimiRef.current.value,
 			hind: Number(hindRef.current.value),
 			aktiivne: aktiivneRef.current.checked,

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import hinnadJSON from '../data/hinnad.json';
+import { Link } from 'react-router-dom';
 function Hinnad() {
 	const [hinnad, setHinnad] = useState(hinnadJSON);
 
@@ -73,7 +74,12 @@ function Hinnad() {
 			<br />
 
 			{hinnad.map((hind, index) => (
-				<div key={index}>{hind.number}</div>
+				<div key={hind}>
+					{hind.number}
+					<Link to={'/hind/' + index}>
+						<button>Vaata lähemalt</button>
+					</Link>
+				</div>
 			))}
 		</div>
 	);

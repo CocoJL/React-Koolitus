@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import tallinnJSON from '../data/tallinn.json';
-
+import { Link } from 'react-router-dom';
 function HaldaEsindused() {
 	const [keskus, setKeskus] = useState(tallinnJSON);
 	const deleteKeskus = (e) => {
@@ -10,12 +10,30 @@ function HaldaEsindused() {
 
 	return (
 		<div>
-			{keskus.map((keskused, e) => (
-				<div>
-					{e}.{keskused}
-					<button onClick={() => deleteKeskus(e)}>x</button>
-				</div>
-			))}
+			<table>
+				<thead>
+					<tr>
+						<th>Esindus</th>
+						<th>Muuda</th>
+						<th>Kustuta</th>
+					</tr>
+				</thead>
+				<tbody>
+					{keskus.map((keskused, e) => (
+						<tr key={e}>
+							<td>{keskused.nimi}</td>
+							<td>
+								<Link to={'/muuda-esindus/' + e}>
+									<button>Muuda</button>
+								</Link>
+							</td>
+							<td>
+								<button onClick={() => deleteKeskus(e)}>x</button>
+							</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
 		</div>
 	);
 }

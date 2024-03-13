@@ -1,36 +1,21 @@
-import React from "react";
-
+import React, { useState } from 'react';
+import tegelasedJSON from '../data/tegelased.json';
 function Avaleht() {
-  return (
-    <div>
-      <div>A</div>
-      <div>
-        <div>Mickey</div>
-        <div>Mouse</div>
-        <div>Disneyland</div>
-      </div>
-      <div>
-        <div>Minnie</div>
-        <div>Mouse</div>
-        <div>Disneyland</div>
-      </div>
-      <div>
-        <div>Winnie</div>
-        <div>Pooh</div>
-        <div>Hundred Acre Wood</div>
-      </div>
-      <div>
-        <div>Roo</div>
-        <div>Kangaroo</div>
-        <div>Hundred Acre Wood</div>
-      </div>
-      <div>
-        <div>Scooby</div>
-        <div>Doo</div>
-        <div>Crystal Cove</div>
-      </div>
-    </div>
-  );
+	const tegelased = tegelasedJSON;
+	const [nimi, setNimi] = useState('');
+	const kuvaNimi = (tegelane) => {
+		setNimi(tegelane.eesnimi);
+	};
+
+	return (
+		<div>
+			{nimi !== '' && <div>Klikkisid tegelase {nimi} peal</div>}
+			{tegelased.map((tegelane) => (
+				<div>{tegelane.eesnimi}</div>
+			))}
+			<button onClick={kuvaNimi}>Kuva</button>
+		</div>
+	);
 }
 
 export default Avaleht;

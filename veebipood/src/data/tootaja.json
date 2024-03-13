@@ -1,1 +1,14 @@
-["Urmet", "Kaido", "Liina", "Maiki", "Heidi", "Epp", "Kaire", "Anet", "Maarja", "Ave", "Annika", "Mihkel"]
+[
+	{ "nimi": "Urmet", "number": "5512302", "elukoht": "Tallinn", "vanus": 41 },
+	{ "nimi": "Kaido", "number": "5512392", "elukoht": "Tallinn", "vanus": 51 },
+	{ "nimi": "Liina", "number": "5512392", "elukoht": "Tallinn", "vanus": 19 },
+	{ "nimi": "Maiki", "number": "5512392", "elukoht": "Tallinn", "vanus": 44 },
+	{ "nimi": "Heidi", "number": "5512392", "elukoht": "Tallinn", "vanus": 12 },
+	{ "nimi": "Epp", "number": "5512392", "elukoht": "Tallinn", "vanus": 51 },
+	{ "nimi": "Kaire", "number": "5512392", "elukoht": "Tallinn", "vanus": 81 },
+	{ "nimi": "Anet", "number": "5512392", "elukoht": "Tallinn", "vanus": 54 },
+	{ "nimi": "Maarja", "number": "5512392", "elukoht": "Tallinn", "vanus": 36 },
+	{ "nimi": "Ave", "number": "5512392", "elukoht": "Tallinn", "vanus": 28 },
+	{ "nimi": "Annika", "number": "5512392", "elukoht": "Tallinn", "vanus": 31 },
+	{ "nimi": "Mihkel", "number": "5512392", "elukoht": "Tallinn", "vanus": 69 }
+]

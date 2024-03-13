@@ -1,1 +1,9 @@
-["Ülemiste", "Viimsi", "Roccal Al Mare", "Magistrali", "Vesse", "Kristiine", "Järveotsa"]
+[
+	{ "nimi": "Ülemiste" },
+	{ "nimi": "Viimsi" },
+	{ "nimi": "Roccal Al Mare" },
+	{ "nimi": "Magistrali" },
+	{ "nimi": "Vesse" },
+	{ "nimi": "Kristiine" },
+	{ "nimi": "Järveotsa" }
+]

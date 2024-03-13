@@ -1,0 +1,22 @@
+[
+	{ "nimi": "Arvo", "ala": "Muusika", "telefon": "TBA" },
+	{ "nimi": "Kelly", "ala": "Rporter", "telefon": "TBA" },
+	{ "nimi": "Edward", "ala": "Kujundus", "telefon": "TBA" },
+	{ "nimi": "Kerly", "ala": "Turg", "telefon": "TBA" },
+	{ "nimi": "Maido", "ala": "Kauplemine", "telefon": "TBA" },
+	{
+		"nimi": "Oskar",
+		"ala": "Laulka",
+		"telefon": "513123"
+	},
+	{
+		"nimi": "Madis",
+		"ala": "Soitja",
+		"telefon": "1321333"
+	},
+	{
+		"nimi": "Leeru",
+		"ala": "Ralli",
+		"telefon": "1231993"
+	}
+]

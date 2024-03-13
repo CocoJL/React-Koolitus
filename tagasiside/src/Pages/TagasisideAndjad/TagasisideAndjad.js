@@ -1,7 +1,7 @@
 import './tagasisideandjad.css';
 import nimedJSON from '../TagasisideAndjad/nimed.json';
 import { useRef, useState } from 'react';
-
+import { Link } from 'react-router-dom';
 function TagasisideAndjad() {
 	const [nimed, setNimed] = useState(nimedJSON);
 	const lisaNimiRef = useRef();
@@ -54,9 +54,13 @@ function TagasisideAndjad() {
 			<button onClick={writeEst}>Kirjuta nime ette EST</button>
 			{nimed.map((nimi, e) => (
 				<div key={nimi}>
+					<br />
 					{nimi}
-
+					<br />
 					<button onClick={() => deleteX(e)}>x</button>
+					<Link to={'/yks-tagasiside/' + e}>
+						<button>Vaata lähemalt</button>
+					</Link>
 				</div>
 			))}
 			<label>Lisa uus nimi</label>

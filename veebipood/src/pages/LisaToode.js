@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import tootedJSON from '../data/tooted.json';
-import userEvent from '@testing-library/user-event';
 
 function LisaToode() {
 	const [sonum, uuendaSonum] = useState('');
@@ -38,6 +37,7 @@ function LisaToode() {
 		<div>
 			<div>LisaToode</div>
 			<div>
+				bv
 				<h1>The input element</h1>
 				<label>Toote nimi: </label>
 				<input ref={nimiRef} type='text' />

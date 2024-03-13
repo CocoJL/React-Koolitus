@@ -24,8 +24,13 @@ function Tooted() {
 			{/* Väljastame tooted */}
 			<ul>
 				{tooted.map((toode, index) => (
-					<div key={index}>
-						<img className={toode.aktiivne ? 'pilt' : 'pilt-mitteaktiivne'} src={toode.pilt} alt='' /> <br />
+					<div key={toode}>
+						<img
+							className={toode.aktiivne ? 'pilt' : 'pilt-mitteaktiivne'}
+							src={toode.pilt}
+							alt=''
+						/>{' '}
+						<br />
 						<div>{toode.nimi}</div>
 						<div>{toode.hind} €</div>
 						{/* Esimene / kui j22b 2ra siis liidab olemasoleva URL, 

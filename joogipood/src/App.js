@@ -2,6 +2,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Avaleht from './Pages/Avaleht/Avaleht';
 import Haldajooke from './Pages/HaldaJooke/Haldajooke';
 import LisaJook from './Pages/LisaJook/LisaJook';
+import Jook from './Pages/Jook/Jook';
 
 function App() {
 	return (
@@ -15,10 +16,12 @@ function App() {
 			<Link to='/lisajook'>
 				<button>Lisajook</button>
 			</Link>
+
 			<Routes>
 				<Route path='/' element={<Avaleht />}></Route>
 				<Route path='haldajooke' element={<Haldajooke />}></Route>
 				<Route path='lisajook' element={<LisaJook />}></Route>
+				<Route path='jook/:index' element={<Jook />}></Route>
 			</Routes>
 		</div>
 	);
