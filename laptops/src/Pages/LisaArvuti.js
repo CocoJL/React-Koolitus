@@ -1,27 +1,39 @@
-import React from "react";
-import { useState } from "react";
+import React, { useRef } from 'react';
+import { useState } from 'react';
 
 function LisaArvuti() {
-  const [message, setMessage] = useState("Lisa arvuti!");
-  const [nupp, setNupp] = useState(true);
+	const [message, setMessage] = useState('Lisa arvuti!');
 
-  function addProduct() {
-    setMessage("Lisatud, aitäh!");
-    setNupp(false);
-  }
+	const markRef = useRef();
+	const mudelRef = useRef();
+	const hindRef = useRef();
 
-  return (
-    <div>
-      <div>Sõnum: {message}</div>
-      <label>Mark</label> <br />
-      <input type='text' /> <br />
-      <label>Mudel</label> <br />
-      <input type='text' /> <br />
-      <label>Maksumus</label> <br />
-      <input type='number' /> <br />
-      {nupp === true && <button onClick={addProduct}>Sisesta</button>}
-    </div>
-  );
+	function addProduct() {
+		setMessage('Lisatud, aitäh!');
+
+		const newComputer = {
+			mark: markRef.current.value,
+			mudel: mudelRef.current.value,
+			hind: hindRef.current.value,
+		};
+
+		const computers = JSON.parse(localStorage.getItem('laptops')) || [];
+		computers.push(newComputer);
+		localStorage.setItem('laptops', JSON.stringify(computers));
+	}
+
+	return (
+		<div>
+			<div>Sõnum: {message}</div>
+			<label>Mark</label> <br />
+			<input type='text' ref={markRef} /> <br />
+			<label>Mudel</label> <br />
+			<input type='text' ref={mudelRef} /> <br />
+			<label>Maksumus</label> <br />
+			<input type='number' ref={hindRef} /> <br />
+			<button onClick={addProduct}>Lisa</button>
+		</div>
+	);
 }
 
 export default LisaArvuti;

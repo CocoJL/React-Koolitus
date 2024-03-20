@@ -43,7 +43,7 @@ function Ostukorv() {
 				{ostukorv.map((toode, e) => (
 					<div key={e}>
 						{toode.nimi} {toode.hind}€
-						<button onClick={() => kustutaToode(e)}>x</button>
+						<button onClick={() => kustutaToode(toode)}>x</button>
 						<button onClick={() => lisaOstukorvi(toode)}>Lisa</button>
 					</div>
 				))}

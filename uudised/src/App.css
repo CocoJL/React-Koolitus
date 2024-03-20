@@ -1,7 +1,21 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
 .valitud {
-  font-weight: bold;
+	font-weight: bold;
+}
+
+.flag {
+	width: 40px;
+	margin: 5px;
+}
+
+.flag:hover {
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.flag:active {
+	padding: 1px;
 }

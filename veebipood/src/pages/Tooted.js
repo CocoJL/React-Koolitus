@@ -58,7 +58,7 @@ function Tooted() {
 			{/* Väljastame tooted */}
 			<ul>
 				{tooted.map((toode, index) => (
-					<div key={toode}>
+					<div key={index}>
 						<img
 							className={toode.aktiivne ? 'pilt' : 'pilt-mitteaktiivne'}
 							src={toode.pilt}

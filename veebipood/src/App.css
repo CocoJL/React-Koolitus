@@ -92,3 +92,12 @@
 .turtle {
 	width: 100px;
 }
+
+.lang:hover {
+	opacity: 0.85;
+	cursor: pointer;
+}
+
+.lang:active {
+	padding: 1px;
+}

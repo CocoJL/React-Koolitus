@@ -1,19 +1,29 @@
-import React, { useState } from 'react';
 import tegelasedJSON from '../data/tegelased.json';
+import Routing from './Routing';
 function Avaleht() {
-	const tegelased = tegelasedJSON;
-	const [nimi, setNimi] = useState('');
-	const kuvaNimi = (tegelane) => {
-		setNimi(tegelane.eesnimi);
+	const tegelane = tegelasedJSON;
+
+	const valiTegelane = (tegelased) => {
+		const tegelane = JSON.parse(localStorage.getItem('tegelased')) || [];
+		tegelane.push(tegelased);
+		localStorage.setItem('tegelased', JSON.stringify(tegelane));
 	};
 
 	return (
 		<div>
-			{nimi !== '' && <div>Klikkisid tegelase {nimi} peal</div>}
-			{tegelased.map((tegelane) => (
-				<div>{tegelane.eesnimi}</div>
+			<Routing />
+			<br />
+			{tegelane.map((tegelased) => (
+				<div>
+					<div>
+						{tegelased.eesnimi}
+						{tegelased.perenimi}
+						{tegelased.elukoht}
+						{tegelased.vanus}
+					</div>
+					<button onClick={() => valiTegelane(tegelased)}>Vali</button>
+				</div>
 			))}
-			<button onClick={kuvaNimi}>Kuva</button>
 		</div>
 	);
 }
